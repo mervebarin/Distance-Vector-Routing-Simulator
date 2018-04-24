@@ -33,7 +33,7 @@ public class Node
 		// Else if node is a direct neighbor, use the neighbor id
 		// Otherwise, choose a random neighbor (see randomNeighbor method)
 
-		// WRITE YOUR CODE HERE
+		
 		//System.out.println("WRITE YOUR CODE HERE");
 		for (int j = 0; j<DVSimulator.NUMNODES; j++) {	// A for loop is needed to initialize the cost required to get to other nodes and current node's distance vector.
 			cost[j] = DVSimulator.cost[id][j];	//We get the values from DVSimulator class.
@@ -100,7 +100,7 @@ public class Node
 		// and current node's DV as the dv
 		// then send packet using helper method sendPacket in DVSimulator
 
-		// WRITE YOUR CODE HERE
+		
 		for(int i=0;i<neighbors.length;i++){ 
 			Packet p = new Packet(id,neighbors[i],myDV); //For every neighbor current node has a packet is created and sent.
 			DVSimulator.sendPacket(p);
@@ -120,7 +120,7 @@ public class Node
 		// 1. Notify neighbors about the new myDV using notifyNeighbors() method
 		// 2. Increment the convergence measure numUpdates variable once
 
-		// WRITE YOUR CODE HERE
+		
 		boolean updated = false;	//a boolean is needed to understand if an update has been made or not.
 		
 		for(int i=0;i<neighborDV[neighbor_id].length;i++){ 
